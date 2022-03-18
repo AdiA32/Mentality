@@ -25,7 +25,7 @@ def send_sms_via_email(
         email.sendmail(sender_email, receiever_email, email_message)
 def main():
     number = "9258758376"
-    message = "hello!"
+    message = "once!"
 
     sender_credentials = ("ccvdc123@gmail.com", "xdncltargkvgrvbn")
 
