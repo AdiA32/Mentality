@@ -1,8 +1,8 @@
 # sms: vtext.com
 # mms: mypixmessages.com
 # xdncltargkvgrvbn
-import email, smtplib, ssl
-
+import email, smtplib, ssl, csv
+import getquote
 
 def send_sms_via_email(
     number: str,
@@ -23,13 +23,28 @@ def send_sms_via_email(
     ) as email:
         email.login(sender_email, email_password)
         email.sendmail(sender_email, receiever_email, email_message)
+
+
 def main():
-    number = "9258758376"
-    message = "You should get this message at 1130 AM"
+    # number = "9254807102" #aastha 
+    number = "9258758376" #adi 
 
+    # with open(
+    #     "quotes_data.txt",
+    #     "r",
+    # ) as file:
+    #     reader = csv.reader(file, delimiter="|", encoding='utf-8')#, escapechar='\\')
+    #     header = []
+    #     header = next(reader)
+    #     print(header[0])
+    #
+    #
+    # message = header[0]#"You should get this message at 1130 AM hola"
+    message = getquote.get_random_quote('zen')
     sender_credentials = ("ccvdc123@gmail.com", "xdncltargkvgrvbn")
-
+    
     send_sms_via_email(number, message, sender_credentials)
+
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,6 @@
+send one quote from a API or a quote database that you fuck with.
+
+send one quote from mentality. either copy the ones you have.
+  make cvs delimtied by | (prob the easiest) --> read first quote, send, put in used pile.
+  make json file --> benefits??? --> everything in one file, can access based on integer. how to store current vairable number?
+                 --> downside??? --> gotta make the json which is harder to make CSV. also acessing and storing the curr_vairable.
